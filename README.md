@@ -1,6 +1,6 @@
 # 🎮 Catalogo de Skins para CS2
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Online-green.svg)](https://github.com/michaelsantosti/borjaoskins)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Online-green.svg)](https://michaelsantosti.github.io/borjaoskins)
 
 Um site estático bonito, leve e totalmente configurável via YAML para exibir suas skins de CS:GO (ou CS2) com:
 
