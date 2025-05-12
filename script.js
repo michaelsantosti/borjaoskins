@@ -54,24 +54,31 @@ fetch('data/skins.yaml')
   .then(yamlText => {
     const data = jsyaml.load(yamlText);
 
-    // logo
+    // Define o logo do header
     const logoEl = document.getElementById('logo');
-    if (data.logo) logoEl.src = data.logo;
+    if (data.logo) {
+      logoEl.src = data.logo;
+      logoEl.alt = 'Logo';
+    }
 
-    // monta as seções dinamicamente
+    // Monta as seções dinamicamente, ocultando as vazias
     const sections = document.getElementById('sections');
     Object.keys(data).forEach(key => {
       if (key === 'logo') return;
+      const items = data[key];
+      if (!Array.isArray(items) || items.length === 0) return;  // pula categorias vazias
       const info = categoryInfo[key] || { display: key, emoji: '' };
       const section = document.createElement('section');
       section.className = 'section';
-      section.innerHTML = `<h2>${info.emoji} ${info.display}</h2>
-                           <div id="${key}" class="grid"></div>`;
+      section.innerHTML = `
+        <h2>${info.emoji} ${info.display}</h2>
+        <div id="${key}" class="grid"></div>
+      `;
       sections.appendChild(section);
-      render(data[key], key);
+      render(items, key);
     });
 
-    // ativa pesquisa
+    // Ativa a pesquisa
     document.getElementById('search').addEventListener('input', filterCards);
   })
   .catch(err => console.error('Erro ao carregar YAML:', err));
