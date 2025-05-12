@@ -3,11 +3,28 @@ const statusLabels = {
   reservado: 'RESERVADO'
 };
 
-const render = (list, containerId) => {
+const categoryInfo = {
+  gloves:  { display: 'Gloves',        emoji: '🧤' },
+  knives:  { display: 'Knives',        emoji: '🔪' },
+  ak47:    { display: 'AK-47',         emoji: '🔫' },
+  m4:      { display: 'M4A1 / M4A4',   emoji: '🔫' },
+  awp:     { display: 'AWP / Scout',   emoji: '🎯' },
+  usp:     { display: 'USP',           emoji: '⭐' },
+  glock:   { display: 'Glock',         emoji: '🔫' },
+  desert:  { display: 'Desert',        emoji: '🏜️' },
+  agents:  { display: 'Agents',        emoji: '🕵️' },
+  others:  { display: 'Others',        emoji: '❓' }
+};
+
+function render(list, containerId) {
   const container = document.getElementById(containerId);
   list.forEach(skin => {
     const card = document.createElement('div');
     card.className = 'card';
+    // para pesquisa
+    card.dataset.name   = skin.nome.toLowerCase();
+    card.dataset.estado = skin.estado.toLowerCase();
+
     card.innerHTML = `
       <div class="img-wrapper">
         <img src="${skin.imagem}" alt="${skin.nome}">
@@ -22,18 +39,40 @@ const render = (list, containerId) => {
     `;
     container.appendChild(card);
   });
-};
+}
+
+function filterCards() {
+  const term = document.getElementById('search').value.trim().toLowerCase();
+  document.querySelectorAll('.card').forEach(card => {
+    const match = card.dataset.name.includes(term) || card.dataset.estado.includes(term);
+    card.style.display = match ? '' : 'none';
+  });
+}
 
 fetch('data/skins.yaml')
   .then(res => res.text())
   .then(yamlText => {
     const data = jsyaml.load(yamlText);
-    // Carrega logo
+
+    // logo
     const logoEl = document.getElementById('logo');
     if (data.logo) logoEl.src = data.logo;
-    // Renderiza skins
-    render(data.m4, 'm4');
-    render(data.awp, 'awp');
+
+    // monta as seções dinamicamente
+    const sections = document.getElementById('sections');
+    Object.keys(data).forEach(key => {
+      if (key === 'logo') return;
+      const info = categoryInfo[key] || { display: key, emoji: '' };
+      const section = document.createElement('section');
+      section.className = 'section';
+      section.innerHTML = `<h2>${info.emoji} ${info.display}</h2>
+                           <div id="${key}" class="grid"></div>`;
+      sections.appendChild(section);
+      render(data[key], key);
+    });
+
+    // ativa pesquisa
+    document.getElementById('search').addEventListener('input', filterCards);
   })
   .catch(err => console.error('Erro ao carregar YAML:', err));
 

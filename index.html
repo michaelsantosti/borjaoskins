@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CS:GO Skins</title>
+  <title>Borjão CS2 Skins</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Fonte Roboto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <div class="header-content">
       <img id="logo" src="" alt="Logo" class="logo">
-      <h1>CS:GO Skins</h1>
+      <h1>CS2 Skins</h1>
     </div>
   </header>
 
   <main>
-    <section class="section">
-      <h2>M4A4 / M4A1-S</h2>
-      <div id="m4" class="grid"></div>
-    </section>
-
-    <section class="section">
-      <h2>AWP / SCOUT</h2>
-      <div id="awp" class="grid"></div>
-    </section>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Pesquisar skins por nome ou estado...">
+    </div>
+    <div id="sections"></div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
