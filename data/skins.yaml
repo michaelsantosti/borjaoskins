@@ -1,0 +1,26 @@
+m4:
+  - nome: M4A1-S Nightmare
+    preco: 59
+    estado: Field-Tested
+    imagem: imgs/m4-nightmare.jpg
+    data: 13/05
+
+  - nome: M4A1-S Black Lotus
+    preco: 114
+    estado: Factory New
+    imagem: imgs/m4-blacklotus.jpg
+    data: 15/05
+
+awp:
+  - nome: AWP Phobos
+    preco: 9
+    estado: Minimal Wear
+    imagem: imgs/awp-phobos.jpg
+    data: 15/05
+
+  - nome: SSG 08 | Turbo Peek
+    preco: 37
+    estado: Field-Tested
+    imagem: imgs/ssg-turbo.jpg
+    data: 14/05
+
