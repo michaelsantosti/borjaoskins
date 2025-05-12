@@ -2,14 +2,17 @@ m4:
   - nome: M4A1-S Nightmare
     preco: 59
     estado: Field-Tested
-    imagem: imgs/m4-nightmare.jpg
+    imagem: https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_nightmare_light_large.68e892eb4dedad809205a5fd06f175297d1be1cb.png
     data: 13/05
+    status: vendida
+    steam_url: steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198147858100A42934255806D12556856180070924804
 
   - nome: M4A1-S Black Lotus
     preco: 114
     estado: Factory New
     imagem: imgs/m4-blacklotus.jpg
     data: 15/05
+    status: reservado
 
 awp:
   - nome: AWP Phobos
@@ -23,4 +26,3 @@ awp:
     estado: Field-Tested
     imagem: imgs/ssg-turbo.jpg
     data: 14/05
-
