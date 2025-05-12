@@ -139,3 +139,36 @@ header h1 {
   color: #1b2838;
 }
 
+/* Barra de float */
+.float-bar {
+  margin: 8px 0;
+}
+.float-bar .bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right,
+    #4CAF50 0%, #4CAF50 7%,
+    #8BC34A 7%, #8BC34A 15%,
+    #FFEB3B 15%, #FFEB3B 38%,
+    #FF9800 38%, #FF9800 45%,
+    #F44336 45%, #F44336 100%
+  );
+}
+.float-bar .marker {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 14px;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.float-bar small {
+  display: block;
+  text-align: right;
+  font-size: 10px;
+  color: #ccc;
+  margin-top: 2px;
+}
+

@@ -1,39 +1,45 @@
+# Título da aba do navegador
+title: "🎮 Borjão CS2 Skins - Catálogo"
+
+# Texto principal do header
+header: "CS2 Skins"
+
 # Logo do header
 logo: https://i.ibb.co/HLRF9zfv/Borj-o-Skins.png
 
 gloves: []
 knives: []
-ak47: []
-m4:
-  - nome: M4A1-S Nightmare
-    preco: 59
-    estado: Field-Tested
-    imagem: https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_nightmare_light_large.68e892eb4dedad809205a5fd06f175297d1be1cb.png
-    data: 13/05
-    status: vendida
-    steam_url: steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198147858100A42934255806D12556856180070924804
+ak47:
+  - nome: AK-47 | Legion of Anubis
+    preco: 8000
+    estado: Battle-Scarred
+    imagem: http://media.steampowered.com/apps/730/icons/econ/default_generated/weapon_ak47_gs_ak47_professional_light_large.d09d623d0a725c63e8a3905f66bba41ba2ed59e8.png
+    desgaste: 0.693789958954
+    steam_url: steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198147858100A43408470520D2326826504199373137
 
-  - nome: M4A1-S Black Lotus
-    preco: 114
-    estado: Factory New
-    imagem: imgs/m4-blacklotus.jpg
-    data: 15/05
+m4:
+  - nome: M4A4 | Buzz Kill
+    preco: 9000
+    estado: Field-Tested
+    imagem: http://media.steampowered.com/apps/730/icons/econ/default_generated/weapon_m4a1_gs_m4a4_sector_light_large.43ec111ef558f74c49e31621d455f93ba414714e.png
+    data: 13/05
     status: reservado
+    desgaste: 0.288985401392
+    steam_url: steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198147858100A43340816501D598077180474229348
 
 awp:
-  - nome: AWP Phobos
-    preco: 9
-    estado: Minimal Wear
-    imagem: imgs/awp-phobos.jpg
-    data: 15/05
-
-  - nome: SSG 08 | Turbo Peek
-    preco: 37
+  - nome: AWP | Mortis
+    preco: 5000
     estado: Field-Tested
-    imagem: imgs/ssg-turbo.jpg
-    data: 14/05
+    imagem: http://media.steampowered.com/apps/730/icons/econ/default_generated/weapon_awp_gs_awp_death_light_large.19bdee04e6a0b4a3b8f832fd8ea18fea1e558f2e.png
+    data: 15/05
+    status: vendido
+    desgaste: 0.180042892694
+    steam_url: steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198147858100A42934255779D9946837519745072741
+
 usp: []
 glock: []
 desert: []
 agents: []
 others: []
+
