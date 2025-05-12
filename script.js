@@ -24,7 +24,7 @@ function render(list, containerId) {
     card.dataset.name   = skin.nome.toLowerCase();
     card.dataset.estado = skin.estado.toLowerCase();
 
-    // float
+    // monta a barra de float
     const f = parseFloat(skin.desgaste);
     const floatMarkup = isNaN(f)
       ? ''
@@ -42,10 +42,11 @@ function render(list, containerId) {
         ${skin.status ? `<div class="status-badge ${skin.status}">${statusLabels[skin.status]}</div>` : ''}
       </div>
       <div class="info">
-        <p>${skin.nome} (${skin.estado})</p>
+        <p class="nome">${skin.nome}</p>
+        <p class="estado"><em>${skin.estado}</em></p>
         <span>R$ ${skin.preco}</span>
         <small>${skin.data}</small>
-        ${skin.steam_url ? `<a class="steam-link" href="${skin.steam_url}">Ver na Steam</a>` : ''}
+        ${skin.steam_url ? `<a class="steam-link" href="${skin.steam_url}">Ver no CS2</a>` : ''}
         ${floatMarkup}
       </div>
     `;
@@ -97,7 +98,7 @@ fetch('data/skins.yaml')
       render(items, key);
     });
 
-    // ativa pesquisa
+    // ativa busca
     document.getElementById('search').addEventListener('input', filterCards);
   })
   .catch(err => console.error('Erro ao carregar YAML:', err));

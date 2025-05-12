@@ -108,9 +108,15 @@ header h1 {
   padding: 10px;
   text-align: center;
 }
-.card .info p {
-  margin-bottom: 6px;
+.card .info .nome {
   font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.card .info .estado {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 6px;
 }
 .card .info span {
   font-weight: 700;
@@ -123,7 +129,7 @@ header h1 {
   margin-bottom: 8px;
 }
 
-/* Botão Steam */
+/* Botão CS2 */
 .steam-link {
   display: inline-block;
   padding: 6px 12px;
