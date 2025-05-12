@@ -2,10 +2,10 @@
 title: "🎮 Borjão CS2 Skins - Catálogo"
 
 # Texto principal do header
-header: "CS2 Skins"
+header: "Catálogo de Skins"
 
 # Logo do header
-logo: https://i.ibb.co/HLRF9zfv/Borj-o-Skins.png
+logo: https://i.ibb.co/ksxwscWX/Borjao-Skins.png
 
 gloves: []
 knives: []
@@ -13,6 +13,7 @@ ak47:
   - nome: AK-47 | Legion of Anubis
     preco: 8000
     estado: Battle-Scarred
+    data: desbloqueado
     imagem: http://media.steampowered.com/apps/730/icons/econ/default_generated/weapon_ak47_gs_ak47_professional_light_large.d09d623d0a725c63e8a3905f66bba41ba2ed59e8.png
     desgaste: 0.693789958954
     steam_url: steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198147858100A43408470520D2326826504199373137
