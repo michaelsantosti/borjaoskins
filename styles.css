@@ -1,74 +1,125 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
+/* Reset simples */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  padding: 20px;
+/* Tipografia e cores gerais */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.4;
 }
 
+/* Header */
+header {
+  background: #1b1b1b;
+  padding: 20px 0;
+}
+.header-content {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 50px;
+  margin-right: 20px;
+}
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Seções */
+.section {
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+.section h2 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ccc;
+}
+
+/* Grid de cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 15px;
-  width: 90%;
-  margin: auto;
+  gap: 20px;
 }
 
+/* Card individual */
 .card {
   background-color: #222;
   border-radius: 8px;
-  padding: 10px;
-  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
 }
-
+.card:hover {
+  transform: translateY(-5px);
+}
 .img-wrapper {
   position: relative;
 }
-
 .card img {
-  max-width: 100%;
-  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
 .status-badge {
   position: absolute;
-  top: 8px;
-  left: 8px;
-  background: red;
-  color: white;
-  padding: 5px 10px;
-  font-weight: bold;
-  font-size: 12px;
-  border-radius: 5px;
-  z-index: 1;
-  transform: rotate(-15deg);
-  opacity: 0.9;
+  top: 10px;
+  left: 10px;
+  background: crimson;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+  transform: rotate(-12deg);
 }
-
 .status-badge.reservado {
   background: purple;
 }
 
-.status-badge.vendida {
-  background: crimson;
+/* Conteúdo do card */
+.card .info {
+  padding: 10px;
+  text-align: center;
+}
+.card .info p {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.card .info span {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+.card .info small {
+  color: #999;
+  display: block;
+  margin-bottom: 8px;
 }
 
+/* Botão Steam */
 .steam-link {
   display: inline-block;
-  margin-top: 8px;
   padding: 6px 12px;
   background-color: #1b2838;
   color: #66c0f4;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
 }
-
 .steam-link:hover {
   background-color: #66c0f4;
   color: #1b2838;
