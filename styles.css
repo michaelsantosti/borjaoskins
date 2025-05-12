@@ -111,12 +111,12 @@ header h1 {
 .card .info .nome {
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 .card .info .estado {
   font-style: italic;
   color: #ccc;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 .card .info span {
   font-weight: 700;
